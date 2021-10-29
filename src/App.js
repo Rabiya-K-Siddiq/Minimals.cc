@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/screens/Home';
+import Services from './components/screens/Services';
+import DarkMode from './components/screens/DarkMode';
+import Products from './components/screens/Products.jsx';
+import Footer from './components/screens/Footer';
+import Pricing from './components/screens/Pricing';
+import ThemeColor from './components/screens/ThemeColor';
+import Designs from './components/screens/Designs';
+import {Helmet} from "react-helmet";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Helmet>
+      <title>Minimals.cc</title>
+    </Helmet>
+    <Home />
+    <Services />
+    <Products />
+    <DarkMode />
+    <ThemeColor />
+    <Designs />
+    <Pricing />
+    <Footer />
+    </>
   );
-}
+};
 
 export default App;
